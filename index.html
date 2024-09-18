@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Settlement Project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/5548f5ed00.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="heap.js"></script>
+    <script src="script.js" type="module"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light" style="font-size: 25px; font-family: 'Roboto', sans-serif; background-color: #f8f9fa; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        Cash Settlement Project
+    </nav>
+
+    <div id="input-container" class="container mt-4">
+        <div class="form-group">
+            <label for="numPeople">Number of People:</label>
+            <input type="number" class="form-control" id="numPeople" min="2" max="10" value="3">
+            <!--id="numPeople" is the identifier for the input field that captures how many people are involved in the transaction.-->
+        </div>
+        <div id="amountInputs"></div>
+        <button type="button" class="btn btn-primary btn-lg btn-animated" id="generate-inputs">Generate Inputs</button>
+    </div>
+
+    <div id="container" style="display: none;">
+        <div id="mynetwork"></div>
+         <!-- The id="mynetwork" is used to target this element in your JavaScript code 
+        for rendering the graph using the Vis-Network library.-->
+        <div id="container2">
+            <span id="temptext" style="width: 100%; text-align: center; font-size: x-large">
+                Click on solve to get Solution !!
+            </span>
+            <div id="mynetwork2" style="display: none"></div>
+        </div>
+    </div>
+
+    <div class="button-container" style="display: none;">
+        <button type="button" class="btn btn-danger btn-lg btn-animated" id="generate-graph">Visualize Problem</button>
+        <button type="button" class="btn btn-success btn-lg btn-animated" id="solve">Solve</button>
+    </div>
+</body>
+
+</html>
